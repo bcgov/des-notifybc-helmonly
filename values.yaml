@@ -90,6 +90,9 @@ mongodb:
     username: notify-bc
     database: notify-bc
     password: ''
+    usernames: [&username]
+    databases: [&database]
+    passwords: [&password]
   persistence:
     size: 1Gi
   podSecurityContext:
