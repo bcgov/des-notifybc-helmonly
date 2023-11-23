@@ -17,7 +17,7 @@ entries:
       licenses: Apache-2.0
     apiVersion: v2
     appVersion: 7.0.2
-    created: "2023-11-03T14:56:46.561493-07:00"
+    created: "2023-11-23T15:40:06.040278-08:00"
     dependencies:
     - name: common
       repository: oci://registry-1.docker.io/bitnamicharts
@@ -44,12 +44,31 @@ entries:
     sources:
     - https://github.com/bitnami/charts/tree/main/bitnami/mongodb
     urls:
-    - https://bcgov.github.io/des-notifybc/charts/mongodb-14.1.0.tgz
+    - charts/mongodb-14.1.0.tgz
     version: 14.1.0
   notify-bc:
   - apiVersion: v2
     appVersion: "4.1"
-    created: "2023-11-03T14:56:46.577152-07:00"
+    created: "2023-11-23T15:40:06.071144-08:00"
+    dependencies:
+    - name: mongodb
+      repository: https://charts.bitnami.com/bitnami
+      version: 14.1.0
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 18.2.0
+    description: NotifyBC Helm chart for Kubernetes
+    digest: 1bc6a600c7bae599501f236a41ebd4a850f8c9f27148e4ecebd605d9666cad3b
+    icon: https://raw.githubusercontent.com/bcgov/NotifyBC/main/favicon.ico
+    name: notify-bc
+    type: application
+    urls:
+    - charts/notify-bc-2.1.0.tgz
+    version: 2.1.0
+  - apiVersion: v2
+    appVersion: "4.1"
+    created: "2023-11-23T15:40:06.047461-08:00"
     dependencies:
     - name: mongodb
       repository: https://charts.bitnami.com/bitnami
@@ -64,7 +83,7 @@ entries:
     name: notify-bc
     type: application
     urls:
-    - https://bcgov.github.io/des-notifybc/charts/notify-bc-2.0.0.tgz
+    - charts/notify-bc-2.0.0.tgz
     version: 2.0.0
   redis:
   - annotations:
@@ -81,7 +100,7 @@ entries:
       licenses: Apache-2.0
     apiVersion: v2
     appVersion: 7.2.2
-    created: "2023-11-03T14:56:46.583478-07:00"
+    created: "2023-11-23T15:40:06.074544-08:00"
     dependencies:
     - name: common
       repository: oci://registry-1.docker.io/bitnamicharts
@@ -105,6 +124,6 @@ entries:
     sources:
     - https://github.com/bitnami/charts/tree/main/bitnami/redis
     urls:
-    - https://bcgov.github.io/des-notifybc/charts/redis-18.2.0.tgz
+    - charts/redis-18.2.0.tgz
     version: 18.2.0
-generated: "2023-11-03T14:56:46.555162-07:00"
+generated: "2023-11-23T15:40:06.035696-08:00"

@@ -1,1 +1,3 @@
 !*.tgz
+**/*.local.*
+.DS_Store
