@@ -14,7 +14,7 @@ cd des-notifybc
 oc login --token=secret-token --server=https://myopnshift.com
 # Step 3 - Choose the tools folder
 oc project 12345-tools
-# step 4 - Apply  file
+# step 4 - Apply deployment file
 oc apply -f deployments/openshift/notify-build.yaml
 ```
 
