@@ -6,6 +6,18 @@
     - If a deployment already exists, run `helm uninstall dev` to remove it, then repeat the command above.
 1. To deploy to `test`, replace `dev` with `test` in the above example.
 
+## Deploying BuildConfig and ImageStream for NotifyBC application
+```bash
+# Step 1 - Go to Directory of Repo
+cd des-notifybc
+# Step 2 - Login to OpenShift oc command line
+oc login --token=secret-token --server=https://myopnshift.com
+# Step 3 - Choose the tools folder
+oc project 12345-tools
+# step 4 - Apply deployment file
+oc apply -f deployments/openshift/notify-build.yaml
+```
+
 ## Upgrading from v1 to v2
 
 ### MongoDB
