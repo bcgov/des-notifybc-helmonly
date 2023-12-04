@@ -12,9 +12,5 @@ spec:
     - ports:
         - protocol: TCP
           port: 27017
-      from:
-        - podSelector:
-            matchLabels:
-              app.kubernetes.io/instance: {{ .Release.Name }}
   policyTypes:
     - Ingress
