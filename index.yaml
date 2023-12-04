@@ -17,7 +17,7 @@ entries:
       licenses: Apache-2.0
     apiVersion: v2
     appVersion: 7.0.2
-    created: "2023-11-28T13:04:24.257775-08:00"
+    created: "2023-12-04T09:39:58.231758-08:00"
     dependencies:
     - name: common
       repository: oci://registry-1.docker.io/bitnamicharts
@@ -49,7 +49,7 @@ entries:
   notify-bc:
   - apiVersion: v2
     appVersion: "4.1"
-    created: "2023-11-28T13:04:24.279366-08:00"
+    created: "2023-12-04T09:39:58.228468-08:00"
     dependencies:
     - name: mongodb
       repository: https://charts.bitnami.com/bitnami
@@ -59,16 +59,16 @@ entries:
       repository: https://charts.bitnami.com/bitnami
       version: 18.2.0
     description: NotifyBC Helm chart for Kubernetes
-    digest: f4f0e8157a49974f1ef722838d8929694cafb123896e0c2459c45ccc9e0420cb
+    digest: b18faa587d25edca6ccf93d3dee141662fc95606ad62ad27f8dab4e6277106da
     icon: https://raw.githubusercontent.com/bcgov/NotifyBC/main/favicon.ico
     name: notify-bc
     type: application
     urls:
-    - charts/notify-bc-2.1.0.tgz
+    - notify-bc-2.1.0.tgz
     version: 2.1.0
   - apiVersion: v2
     appVersion: "4.1"
-    created: "2023-11-28T13:04:24.266879-08:00"
+    created: "2023-12-04T09:39:58.239985-08:00"
     dependencies:
     - name: mongodb
       repository: https://charts.bitnami.com/bitnami
@@ -100,7 +100,7 @@ entries:
       licenses: Apache-2.0
     apiVersion: v2
     appVersion: 7.2.2
-    created: "2023-11-28T13:04:24.283164-08:00"
+    created: "2023-12-04T09:39:58.243047-08:00"
     dependencies:
     - name: common
       repository: oci://registry-1.docker.io/bitnamicharts
@@ -126,4 +126,4 @@ entries:
     urls:
     - charts/redis-18.2.0.tgz
     version: 18.2.0
-generated: "2023-11-28T13:04:24.253828-08:00"
+generated: "2023-12-04T09:39:58.220452-08:00"
