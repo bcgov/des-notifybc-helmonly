@@ -4,8 +4,8 @@ A fork of the [NotifyBC helm/ directory](https://github.com/bcgov/NotifyBC/tree/
 ## Creating new versions of this chart
 1. Update the `version` property in `src/Chart.yaml` to the desired version number.
 2. From the `src/` directory, run the command `helm package ./` to create a `.tgz` package for the new version.
-3. Move the new `.tgz` file to the `charts/` directory (`mv notify-bc-[version].tgz ../charts`).
-4. Update `charts/index.yaml` to list the new package (`helm repo index ../charts`).
+3. Move the new `.tgz` file to the `docs/` directory (`mv notify-bc-[version].tgz ../docs`).
+4. Update `docs/index.yaml` to list the new package (`helm repo index ../docs`).
 
 ## Deploying to OpenShift
 1. In this example we will be deploying to `dev`, so a file named `values.dev.local.yaml` should exist and contain values specific to the `dev` instance.
