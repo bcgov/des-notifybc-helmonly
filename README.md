@@ -15,8 +15,8 @@ A fork of the [NotifyBC helm/ directory](https://github.com/bcgov/NotifyBC/tree/
 
 ## Deploying BuildConfig and ImageStream for NotifyBC application
 ```bash
-# Step 1 - Go to Directory of Repo
-cd des-notifybc
+# Step 1 - Go to src/ directory of repo
+cd des-notifybc/src
 # Step 2 - Login to OpenShift oc command line
 oc login --token=secret-token --server=https://myopnshift.com
 # Step 3 - Choose the tools folder
