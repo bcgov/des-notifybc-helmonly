@@ -1,4 +1,11 @@
 # Digital Engagement Solutions NotifyBC
+A fork of the [NotifyBC helm/ directory](https://github.com/bcgov/NotifyBC/tree/main/helm) used by the GDX DES team to deploy instances of NotifyBC to OpenShift.
+
+## Creating new versions of this chart
+1. Update the `version` property in `src/Chart.yaml` to the desired version number.
+2. From the `src/` directory, run the command `helm package ./` to create a `.tgz` package for the new version.
+3. Move the new `.tgz` file to the `docs/` directory (`mv notify-bc-[version].tgz ../docs`).
+4. Update `docs/index.yaml` to list the new package (`helm repo index ../docs`).
 
 ## Deploying to OpenShift
 1. In this example we will be deploying to `dev`, so a file named `values.dev.local.yaml` should exist and contain values specific to the `dev` instance.
@@ -8,8 +15,8 @@
 
 ## Deploying BuildConfig and ImageStream for NotifyBC application
 ```bash
-# Step 1 - Go to Directory of Repo
-cd des-notifybc
+# Step 1 - Go to src/ directory of repo
+cd des-notifybc/src
 # Step 2 - Login to OpenShift oc command line
 oc login --token=secret-token --server=https://myopnshift.com
 # Step 3 - Choose the tools folder
