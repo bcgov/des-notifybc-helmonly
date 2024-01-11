@@ -1,9 +1,74 @@
 apiVersion: v1
 entries:
+  mongodb:
+  - annotations:
+      category: Database
+      images: |
+        - name: kubectl
+          image: docker.io/bitnami/kubectl:1.28.4-debian-11-r0
+        - name: mongodb-exporter
+          image: docker.io/bitnami/mongodb-exporter:0.40.0-debian-11-r0
+        - name: mongodb
+          image: docker.io/bitnami/mongodb:7.0.4-debian-11-r0
+        - name: nginx
+          image: docker.io/bitnami/nginx:1.25.3-debian-11-r1
+        - name: os-shell
+          image: docker.io/bitnami/os-shell:11-debian-11-r91
+      licenses: Apache-2.0
+    apiVersion: v2
+    appVersion: 7.0.4
+    created: "2024-01-11T11:11:34.179858-08:00"
+    dependencies:
+    - name: common
+      repository: oci://registry-1.docker.io/bitnamicharts
+      tags:
+      - bitnami-common
+      version: 2.x.x
+    description: MongoDB(R) is a relational open source NoSQL database. Easy to use,
+      it stores data in JSON-like documents. Automated scalability and high-performance.
+      Ideal for developing cloud native applications.
+    digest: 646033746669878bdc2ba05eb61f1d376defd06ffcf148d6c02896d349fa5d8b
+    home: https://bitnami.com
+    icon: https://bitnami.com/assets/stacks/mongodb/img/mongodb-stack-220x234.png
+    keywords:
+    - mongodb
+    - database
+    - nosql
+    - cluster
+    - replicaset
+    - replication
+    maintainers:
+    - name: VMware, Inc.
+      url: https://github.com/bitnami/charts
+    name: mongodb
+    sources:
+    - https://github.com/bitnami/charts/tree/main/bitnami/mongodb
+    urls:
+    - mongodb-14.3.2.tgz
+    version: 14.3.2
   notify-bc:
   - apiVersion: v2
+    appVersion: "5.0"
+    created: "2024-01-11T11:11:34.203848-08:00"
+    dependencies:
+    - name: mongodb
+      repository: https://charts.bitnami.com/bitnami
+      version: 14.3.2
+    - condition: redis.enabled
+      name: redis
+      repository: https://charts.bitnami.com/bitnami
+      version: 16.13.2
+    description: NotifyBC Helm chart for Kubernetes
+    digest: 4f87b8b6113b25bb766b68de15515242b6e121bdd6ccfdcac790a9b623d731d7
+    icon: https://raw.githubusercontent.com/bcgov/NotifyBC/main/favicon.ico
+    name: notify-bc
+    type: application
+    urls:
+    - notify-bc-3.0.0.tgz
+    version: 3.0.0
+  - apiVersion: v2
     appVersion: "4.1"
-    created: "2023-12-08T10:00:22.638457-08:00"
+    created: "2024-01-11T11:11:34.196311-08:00"
     dependencies:
     - name: mongodb
       repository: https://charts.bitnami.com/bitnami
@@ -13,7 +78,7 @@ entries:
       repository: https://charts.bitnami.com/bitnami
       version: 18.2.0
     description: NotifyBC Helm chart for Kubernetes
-    digest: b18faa587d25edca6ccf93d3dee141662fc95606ad62ad27f8dab4e6277106da
+    digest: 50ea3da7193cf08db70d52348e11b5027676ea14d077b012776438900de51dd9
     icon: https://raw.githubusercontent.com/bcgov/NotifyBC/main/favicon.ico
     name: notify-bc
     type: application
@@ -22,7 +87,7 @@ entries:
     version: 2.1.0
   - apiVersion: v2
     appVersion: "4.1"
-    created: "2023-12-08T10:00:22.630517-08:00"
+    created: "2024-01-11T11:11:34.188471-08:00"
     dependencies:
     - name: mongodb
       repository: https://charts.bitnami.com/bitnami
@@ -39,4 +104,37 @@ entries:
     urls:
     - notify-bc-2.0.0.tgz
     version: 2.0.0
-generated: "2023-12-08T10:00:22.623109-08:00"
+  redis:
+  - annotations:
+      category: Database
+    apiVersion: v2
+    appVersion: 6.2.7
+    created: "2024-01-11T11:11:34.206917-08:00"
+    dependencies:
+    - name: common
+      repository: https://charts.bitnami.com/bitnami
+      tags:
+      - bitnami-common
+      version: 1.x.x
+    description: Redis(R) is an open source, advanced key-value store. It is often
+      referred to as a data structure server since keys can contain strings, hashes,
+      lists, sets and sorted sets.
+    digest: 358c629ca6d1d5f96cfa4191b57f04244d55a4884c95cb76c0cf256b0a5b6826
+    home: https://github.com/bitnami/charts/tree/master/bitnami/redis
+    icon: https://bitnami.com/assets/stacks/redis/img/redis-stack-220x234.png
+    keywords:
+    - redis
+    - keyvalue
+    - database
+    maintainers:
+    - name: Bitnami
+      url: https://github.com/bitnami/charts
+    - email: cedric@desaintmartin.fr
+      name: desaintmartin
+    name: redis
+    sources:
+    - https://github.com/bitnami/bitnami-docker-redis
+    urls:
+    - redis-16.13.2.tgz
+    version: 16.13.2
+generated: "2024-01-11T11:11:34.175141-08:00"
